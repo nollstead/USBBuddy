@@ -14,9 +14,9 @@ Connect the adapter to your computer using the USB-C cable (either USB-A to USB-
 
 ## 2. Solder on pin headers & connect TXO and RXI
 
-The adapter comes without pin headers so that you have the option of either soldering on the bottom (for connecting to a breadboard) or on the top (for placing in an enclosure).  For this and subsequent examples we'll assume this is used on a breadboard and solder pin headers to the bottom.
+The adapter comes without the pin headers soldered on, so that you have the option of either soldering on the bottom (for connecting to a breadboard) or on the top (for placing in an enclosure).  For this and subsequent examples we'll assume this is used on a breadboard and solder the pin headers to the bottom.
 
-Using a jumper wire, connect the TXO and RXI pins together on the breadboard (or directly if not using a breadboard).  
+Using a jumper wire, connect the TXO and RXI pins together.
 
 ## 3.  Test
 

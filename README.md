@@ -6,36 +6,33 @@
 
 Looking to breadboard your next MCU-based idea and need a USB or Serial interface to load firmware, voltage regulation and/or logic level conversion but annoyed with the hassle of using multiple components?  Want your prototype to be as close to your production version as possible, without having to add in a lot of connectors to support breadboarding?  Well look no further - this USB-to-Serial Adapter is an easy to use, multi-function, breadboard friendly and feature rich USB-C breakout board, 5v-to-3.3v voltage regulator and Serlal/TTL adapter (with logic level conversion) all in one package.
 
-This adapter fits perfectly on a breadboard and connects to your computer via a USB-C connector - exposing USB data pins, voltages and allowing you to convert USB signals to Serial for programming various MCU's.  You can choose a target voltage (VCC) of either 3.3v or via an included jumper pin - so no soldering required.
+This adapter fits perfectly on a breadboard and connects to your computer via a USB-C connector - exposing USB data pins, voltages and allowing you to convert USB signals to Serial for programming various MCU's.  You can choose a target voltage (VCC) of either 3.3v or 5v via an included jumper pin - so no soldering required.
 
 For USB to serial conversion, standard, push-pull and open source driven DTR are supported, so this can be used a wide selection of MCUs.  Simply connect a 4.7kΩ resistor across CTS# and DTR# for push-pull driven DTR, a 4.7kΩ resistor from DTR# to GND for MCU's that require open source driven DTR or leave as default for standard DTR.  Alternatively, there are spaces on the [back](/images/U2SBack.png) of the adapter to solder on a resistor should that be preferred (we made that a 1206 to make soldering easier).
 
 ## Features & Specs
 
-- Exposes both raw (VBUS) and filtered 5V from USB as well as 3.3v via an internal LDO voltage regulator.
+- Exposes both raw (VBUS) and filtered 5V/3.3v (via an internal LDO voltage regulator)
 - Exposes USB D+ and D- differential pairs with onboard ESD protection.
-- Supports standard, push-pull and open source driven DTR modes
+- Supports both push-pull and open source driven DTR modes
 - Power, TX and RX LED's
 - Automatic level shifting of serial signals to either 5v or 3.3v logic based on jumper selection
 - ESD protection on USB connector
 - Up to 500mA output current
 - 2mm holes for adding to an enclosure
-- ROHC Compliant
-
+- RoHC Compliant
 
 ## USB Breakout
 
-The raw USB VBUS signal and D+/D- differential pairs are broken exposed as pins.  The adapter contains the necessary 5.1kΩ resistors on the USB CC1 and CC2 pins to allow it to source power, so no need to expose them or add those resistors to your breadboard.
+The raw USB VBUS signal and D+/D- differential pairs are exposed.  The adapter contains the necessary 5.1kΩ resistors on the USB CC1 and CC2 pins to allow it to source power, so no need to expose them or add those resistors to your project.
 
 Note that VBUS is connected directly to the VBUS pin on the USB connector, with no filtering or reverse voltage/current protection.  Exercise caution when using this pin and utilize as an output voltage only when a USB cable is connected.
 
-## Voltage Regulation
-
-The onboard voltage regulator steps the 5v USB signal down to 3.3v, exposes it via a pin and supports up to 500mA of current.  So even without using any of the other features it can serve as a standalone USB5V-to-3V3 LDO voltage regulator.
-
 ## Target Voltage Selection
 
-While VBUS is exposed for convenience and may be used if desired, the VCC pin is the primary output voltage for target devices.  VCC voltage is controlled by applying a jumper to select either 5v or 3.3v.  The VCC and GND pins are exposed on both sides of the adapter for convenience, though they are internally connected - so only one of each is required to power a target.  Additionally, the VCC pin is protected via a reverse current Schottky diode, ensuring that any current on the target device does not propagate to the adapter.
+While VBUS is exposed for convenience and may be used if desired, the VCC pin is the primary output voltage for target devices.  VCC voltage is controlled by applying a jumper to select either 5v or 3.3v.  So even without using any of the other features it can serve as a standalone USB5v-to-3.3v LDO voltage regulator.  
+
+The VCC and GND pins are exposed on both sides of the adapter for convenience, though they are internally connected - so only one of each is required to power a target.  Additionally, the VCC pin is protected via a reverse current Schottky diode, ensuring that any current on the target device does not propagate to the adapter.
 
 ## USB-to-Serial Conversion
 
